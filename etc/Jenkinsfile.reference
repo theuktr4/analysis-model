@@ -6,7 +6,7 @@ node {
     }
 
     stage ('Git mining') {
-        discoverGitReferenceBuild()
+        discoverGitReferenceBuild referenceJob: 'reference-analysis-model'
         mineRepository()
     }
 
